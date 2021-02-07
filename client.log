@@ -1,0 +1,16 @@
+2020-05-28 13:54:09,879:__main__:Failed on executing due to:
+'NoneType' object is not subscriptable
+2020-05-28 14:08:09,984:__main__:Failed on executing due to:
+'NoneType' object is not subscriptable
+2020-05-28 15:44:03,688:__main__:Failed on executing due to:
+'NoneType' object is not subscriptable
+2020-05-30 18:16:40,356:__main__:Failed on executing due to:
+Can't instantiate abstract class Gini with abstract methods evaluate_crierion
+2020-05-30 18:19:00,288:__main__:Failed on executing due to:
+Can't instantiate abstract class Gini with abstract methods evaluate_crierion
+2020-05-30 18:19:24,233:__main__:Failed on executing due to:
+Can't instantiate abstract class Gini with abstract methods evaluate_crierion
+2020-05-30 18:19:54,381:__main__:Failed on executing due to:
+Can't instantiate abstract class Gini with abstract methods evaluate_crierion
+2020-05-30 18:23:49,645:__main__:Failed on executing due to:
+Can't instantiate abstract class Gini with abstract methods evaluate_crierion

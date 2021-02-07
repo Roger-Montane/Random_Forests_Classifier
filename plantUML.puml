@@ -1,0 +1,75 @@
+@startuml
+skinparam SequenceMessageAlign direction
+class Client {
+    + main()
+}
+
+class RandomForest {
+    - _max_depth : int
+    - _min_size_split : int
+    - _ratio_samples : float
+    - _num_trees : int
+    - _num_features_node : int
+    - _criterion_name : String
+    - _criterion : Criterion
+    + values : []
+    - _decision_trees : []
+    + fit(x,y)
+    + predict(x) : int []
+    - _combine_predictions(predictions)
+    - _make_trees(dataset : Dataset) : trees []
+    - _build_trees(dataset : Dataset) : SplitNode
+    - _make_split_node(dataset : Dataset, depth) : SplitNode
+    - _make_childs(node, depth, better_split)
+    - _make_leaf(dataset) : Leaf
+}
+
+abstract class DecisionTree {
+    + predict(x)
+}
+
+class Leaf extends DecisionTree {
+    - outcome : numpy.ndarray
+    + predict(x) : int
+}
+
+class SplitNode extends DecisionTree {
+    - _f : int
+    - _v : double
+    - left : None
+    - right : None
+    + predict(x) : int
+}
+
+class Dataset {
+    - _x : numpy.ndarray
+    - _y : numpy.ndarray
+    - _labels : numpy.ndarray
+    + num_samples : numpy.ndarray
+    + num_features : numpy.ndarray
+    '- _gini(left_dataset : Dataset, right_dataset : dataset) : 
+    '- _gini_index(dataset : Dataset) : int
+    + subset_from_ratio(ratio) : list()
+}
+
+abstract class Criterion {
+    + evaluate_criterion()
+}
+
+class Gini extends Criterion {
+    + evaluate_criterion()
+    - _gini_impurity(dataset)
+}
+
+class Entropy extends Criterion {
+    + evaluate_criterion()
+    - _sumatory(dataset)
+}
+
+RandomForest *-right-> "1..*" DecisionTree : trees
+RandomForest *-down-> "1" Criterion : criterion
+SplitNode o-up-> DecisionTree : left child
+SplitNode o-up-> DecisionTree : right child
+Client o-down- RandomForest
+Client o-down- Dataset
+@enduml
