@@ -2,6 +2,7 @@
 The files needed to load the datasets are NOT included in the repository since those were provided by the professor of the subject in which this project was carried out. This means that the IRIS dataset will be the only one to work "out of the box" since it is loaded from the sklearn datasets python library. As for the MNIST and sonar datasets, here are their respective links in order to get the data:
 * http://yann.lecun.com/exdb/mnist/
 * https://archive.ics.uci.edu/ml/datasets/Connectionist+Bench+%28Sonar,+Mines+vs.+Rocks%29
+
 and you can create small scripts to load the data into the Client from the downloads from the before-mentioned pages.
 
 # Random forests classifier
