@@ -1,3 +1,6 @@
+# Disclaimer
+Some of the files needed to manage the datasets are NOT included in the repository since those were provided by the professor of the subject in which this project was carried out.
+
 # Random forests classifier
 This project has been carried out with @isotopi and @BaosMiquel22
 
